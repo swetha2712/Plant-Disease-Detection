@@ -1,0 +1,3 @@
+0 Tomato_Healthy
+1 Tomato_Leaf_Mold
+2 Tomato_Bacterial_Spot
