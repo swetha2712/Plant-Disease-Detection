@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
+import 'package:tflite/tflite.dart';
 
 class PredictionsPage extends StatefulWidget {
   static const namedRoute = 'predictions_page';
@@ -17,15 +18,10 @@ class _PredictionsPageState extends State<PredictionsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Predictions Page'),
+        title: Text('Prediction Page'),
       ),
-      body:
-          widget.image == null ? Text('Not Loaded') : Image.file(widget.image),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(
-          Icons.arrow_right,
-        ),
+      body: Container(
+        child: widget.image == null ? Text('') : Image.file(widget.image),
       ),
     );
   }

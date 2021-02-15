@@ -15,62 +15,53 @@ class CameraPage extends StatefulWidget {
 class _CameraPageState extends State<CameraPage> {
   File image;
 
-  Future openCamera() async {
-    var cameraImage = await ImagePicker.pickImage(source: ImageSource.camera);
-    setState(() {
-      image = cameraImage;
-    });
-  }
-
-  // Function to open a local gallery
-  Future openGalley() async {
-    var galleryImage = await ImagePicker.pickImage(source: ImageSource.gallery);
-    setState(() {
-      image = galleryImage;
-    });
+  Future takeImage(BuildContext context, ImageSource source) async {
+    final navigator = Navigator.of(context);
+    var cameraImage = await ImagePicker.pickImage(source: source);
+    if (cameraImage != null) {
+      // print(cameraImage.path);
+      await navigator.push(
+        MaterialPageRoute(
+          builder: (context) => PredictionsPage(
+            image: cameraImage,
+          ),
+        ),
+      );
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFA9BBBC),
-        appBar: AppBar(
-          title: Text('Camera Page'),
-        ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            BottomButton(
-              onPressed: () {
-                openCamera();
-                if (image != null) {
-                  Navigator.pushNamed(
-                    context,
-                    PredictionsPage.namedRoute,
-                    arguments: {
-                      'image': image,
-                    },
-                  );
-                }
-              },
-              title: 'Take Photo',
-              icon: Icons.camera_alt,
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            BottomButton(
-              onPressed: () {
-                openGalley();
-              },
-              title: 'From Gallery',
-              icon: Icons.collections,
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-          ],
-        ),
+      backgroundColor: Color(0xFFA9BBBC),
+      appBar: AppBar(
+        title: Text('Camera Page'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          BottomButton(
+            onPressed: () {
+              takeImage(context, ImageSource.camera);
+            },
+            title: 'Take Photo',
+            icon: Icons.camera_alt,
+          ),
+          SizedBox(
+            height: 20.0,
+          ),
+          BottomButton(
+            onPressed: () {
+              takeImage(context, ImageSource.gallery);
+            },
+            title: 'From Gallery',
+            icon: Icons.collections,
+          ),
+          SizedBox(
+            height: 20.0,
+          ),
+        ],
+      ),
     );
   }
 }
