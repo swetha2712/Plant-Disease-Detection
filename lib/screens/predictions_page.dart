@@ -16,7 +16,7 @@ class PredictionsPage extends StatefulWidget {
 
 class _PredictionsPageState extends State<PredictionsPage> {
   // St _results;
-  String diseaseName;
+  String diseaseName = 'Plant X is Healthy';
 
   loadModel() async {
     var res = await Tflite.loadModel(
@@ -96,7 +96,7 @@ class _PredictionsPageState extends State<PredictionsPage> {
               ),
               FloatingActionButton.extended(
                 onPressed: () {
-                  Navigator.pop(context);
+                  // Navigator.pop(context);
                 },
                 icon: Icon(Icons.arrow_left),
                 label: Text('Back'),

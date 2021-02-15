@@ -1,9 +1,8 @@
-import 'package:camera_app/screens/predictions_page.dart';
 import 'package:flutter/material.dart';
 
-import 'package:camera_app/screens/normal_camera.dart';
-
+import 'package:camera_app/screens/predictions_page.dart';
 import 'package:camera_app/screens/camera_page.dart';
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -18,3 +17,17 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
+// import 'package:camera_app/screens/predictions_page_design.dart';
+//
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: PageDesign(),
+//     );
+//   }
+// }
