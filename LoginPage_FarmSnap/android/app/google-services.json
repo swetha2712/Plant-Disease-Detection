@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "885187464223",
+    "project_id": "coral-shift-305111",
+    "storage_bucket": "coral-shift-305111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885187464223:android:0fa03a1fe8f471de9d192a",
+        "android_client_info": {
+          "package_name": "com.example.mobile_number_auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885187464223-gmbk7mr877odq9b26j2bupo6986e0n0j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mobile_number_auth",
+            "certificate_hash": "7e44a2589546d1236194dcc85a2088e10de0e305"
+          }
+        },
+        {
+          "client_id": "885187464223-d5airomc7oceef5ojqge7qb1ntma841v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwk4JKwnFE_TL6IdJj8g6mPVsyDudl8mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885187464223-d5airomc7oceef5ojqge7qb1ntma841v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+
+
