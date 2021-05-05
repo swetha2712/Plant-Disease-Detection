@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/reg_page.iml" filepath="$PROJECT_DIR$/reg_page.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/reg_page_android.iml" filepath="$PROJECT_DIR$/android/reg_page_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LoginPage_FarmSnap.iml" filepath="$PROJECT_DIR$/.idea/LoginPage_FarmSnap.iml" />
     </modules>
   </component>
 </project>
